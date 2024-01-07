@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigat"
+    app:startDestination="@id/homeeFragment">
+
+    <fragment
+        android:id="@+id/homeeFragment"
+        android:name="com.nfg.yemektarifi.HomeeFragment"
+        android:label="HomeeFragment" >
+        <action
+            android:id="@+id/action_homeeFragment_to_onlyCorba"
+            app:destination="@id/onlyCorba" />
+        <action
+            android:id="@+id/action_homeeFragment_to_onlyYemek"
+            app:destination="@id/onlyYemek" />
+        <action
+            android:id="@+id/action_homeeFragment_to_onlyTatli"
+            app:destination="@id/onlyTatli" />
+        <action
+            android:id="@+id/action_homeeFragment_to_yemekTatli"
+            app:destination="@id/yemekTatli" />
+        <action
+            android:id="@+id/action_homeeFragment_to_allcyt"
+            app:destination="@id/allcyt" />
+        <action
+            android:id="@+id/action_homeeFragment_to_corbaTatli"
+            app:destination="@id/corbaTatli" />
+        <action
+            android:id="@+id/action_homeeFragment_to_corbaYemek"
+            app:destination="@id/corbaYemek" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlyCorba"
+        android:name="com.nfg.yemektarifi.OnlyCorba"
+        android:label="fragment_only_corba"
+        tools:layout="@layout/fragment_only_corba" >
+        <action
+            android:id="@+id/action_onlyCorba_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlyYemek"
+        android:name="com.nfg.yemektarifi.OnlyYemek"
+        android:label="fragment_only_yemek"
+        tools:layout="@layout/fragment_only_yemek" >
+        <action
+            android:id="@+id/action_onlyYemek_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlyTatli"
+        android:name="com.nfg.yemektarifi.OnlyTatli"
+        android:label="fragment_only_tatli"
+        tools:layout="@layout/fragment_only_tatli" >
+        <action
+            android:id="@+id/action_onlyTatli_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/corbaTatli"
+        android:name="com.nfg.yemektarifi.CorbaTatli"
+        android:label="fragment_corba_tatli"
+        tools:layout="@layout/fragment_corba_tatli" >
+        <action
+            android:id="@+id/action_corbaTatli_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/corbaYemek"
+        android:name="com.nfg.yemektarifi.CorbaYemek"
+        android:label="fragment_corba_yemek"
+        tools:layout="@layout/fragment_corba_yemek" >
+        <action
+            android:id="@+id/action_corbaYemek_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekTatli"
+        android:name="com.nfg.yemektarifi.YemekTatli"
+        android:label="fragment_yemek_tatli"
+        tools:layout="@layout/fragment_yemek_tatli" >
+        <action
+            android:id="@+id/action_yemekTatli_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allcyt"
+        android:name="com.nfg.yemektarifi.Allcyt"
+        android:label="fragment_allcyt"
+        tools:layout="@layout/fragment_allcyt" >
+        <action
+            android:id="@+id/action_allcyt_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.nfg.yemektarifi.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail" />
+</navigation>
