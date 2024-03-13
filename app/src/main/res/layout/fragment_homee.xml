@@ -4,35 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgg3"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="75dp"
+        android:backgroundTint="#9C27B0"
+        android:fontFamily="@font/kepler"
         android:text="Ekle"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toEndOf="@+id/malzemeinput"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
 
     <EditText
         android:id="@+id/malzemeinput"
-        android:layout_width="280dp"
+        android:layout_width="222dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="492dp"
+        android:layout_marginStart="4dp"
         android:ems="10"
         android:hint="Malzeme ismi giriniz"
         android:inputType="text"
         android:textColor="#000000"
         android:textColorHint="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/add"
-        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329" />
 
     <LinearLayout
         android:layout_width="486dp"
@@ -49,9 +56,9 @@
             android:id="@+id/malzemelist"
             android:layout_width="411dp"
             android:layout_height="221dp">
-
         </ListView>
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/textView"
@@ -61,28 +68,24 @@
         android:text="🧑‍🍳 Malzeme Listesi 🧑‍🍳"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/malzemeinput" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="241dp"
-        app:layout_constraintBottom_toTopOf="@+id/malzemeinput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cover__2_" />
 
     <Button
         android:id="@+id/find"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="#9C27B0"
         android:text="Tarif Bul"
-        android:textSize="20sp"
+        android:fontFamily="@font/kepler"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
@@ -99,23 +102,31 @@
             android:id="@+id/optionCorba"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:text="Çorba Tarifleri 🥣"
-            android:textSize="20sp" />
+            android:textSize="18sp"
+            android:textColor="#000000" />
 
         <CheckBox
             android:id="@+id/optionTatli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tatlı Tarifleri 🧁"
-            android:textSize="20sp" />
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/montserrat"/>
 
         <CheckBox
             android:id="@+id/optionYemek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Yemek Tarifleri 🍲"
-            android:textSize="20sp" />
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/montserrat"/>
+
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigat"
-    app:startDestination="@id/homeeFragment">
+    app:startDestination="@id/initialFragment">
 
     <fragment
         android:id="@+id/homeeFragment"
@@ -11,25 +11,53 @@
         android:label="HomeeFragment" >
         <action
             android:id="@+id/action_homeeFragment_to_onlyCorba"
-            app:destination="@id/onlyCorba" />
+            app:destination="@id/onlyCorba"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
         <action
             android:id="@+id/action_homeeFragment_to_onlyYemek"
-            app:destination="@id/onlyYemek" />
+            app:destination="@id/onlyYemek"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
         <action
             android:id="@+id/action_homeeFragment_to_onlyTatli"
-            app:destination="@id/onlyTatli" />
+            app:destination="@id/onlyTatli"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
         <action
             android:id="@+id/action_homeeFragment_to_yemekTatli"
-            app:destination="@id/yemekTatli" />
+            app:destination="@id/yemekTatli"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
         <action
             android:id="@+id/action_homeeFragment_to_allcyt"
-            app:destination="@id/allcyt" />
+            app:destination="@id/allcyt"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
         <action
             android:id="@+id/action_homeeFragment_to_corbaTatli"
-            app:destination="@id/corbaTatli" />
+            app:destination="@id/corbaTatli"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
         <action
             android:id="@+id/action_homeeFragment_to_corbaYemek"
-            app:destination="@id/corbaYemek" />
+            app:destination="@id/corbaYemek"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/onlyCorba"
@@ -38,7 +66,11 @@
         tools:layout="@layout/fragment_only_corba" >
         <action
             android:id="@+id/action_onlyCorba_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right" />
     </fragment>
     <fragment
         android:id="@+id/onlyYemek"
@@ -47,7 +79,11 @@
         tools:layout="@layout/fragment_only_yemek" >
         <action
             android:id="@+id/action_onlyYemek_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/onlyTatli"
@@ -56,7 +92,11 @@
         tools:layout="@layout/fragment_only_tatli" >
         <action
             android:id="@+id/action_onlyTatli_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/corbaTatli"
@@ -65,7 +105,11 @@
         tools:layout="@layout/fragment_corba_tatli" >
         <action
             android:id="@+id/action_corbaTatli_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/corbaYemek"
@@ -74,7 +118,11 @@
         tools:layout="@layout/fragment_corba_yemek" >
         <action
             android:id="@+id/action_corbaYemek_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/yemekTatli"
@@ -83,7 +131,11 @@
         tools:layout="@layout/fragment_yemek_tatli" >
         <action
             android:id="@+id/action_yemekTatli_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/allcyt"
@@ -92,11 +144,24 @@
         tools:layout="@layout/fragment_allcyt" >
         <action
             android:id="@+id/action_allcyt_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/recipeDetailFragment"
         android:name="com.nfg.yemektarifi.RecipeDetailFragment"
         android:label="fragment_recipe_detail"
         tools:layout="@layout/fragment_recipe_detail" />
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.nfg.yemektarifi.InitialFragment"
+        android:label="fragment_initial"
+        tools:layout="@layout/fragment_initial" >
+        <action
+            android:id="@+id/action_initialFragment_to_homeeFragment"
+            app:destination="@id/homeeFragment" />
+    </fragment>
 </navigation>

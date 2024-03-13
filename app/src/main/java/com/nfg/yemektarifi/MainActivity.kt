@@ -1,5 +1,7 @@
 package com.nfg.yemektarifi
 
+import android.animation.Animator
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nfg.yemektarifi.databinding.ActivityMainBinding

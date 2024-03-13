@@ -19,7 +19,9 @@ class AllViewModel(application: Application) : AndroidViewModel(application) {
 
             // Sadece belirli malzemeleri içeren tarifleri filtrele
             val filteredRecipes = allRecipes.filter { recipe ->
-                ingredients.any { ingredient -> recipe.materials.contains(ingredient, ignoreCase = true) }
+                ingredients.any { ingredient ->
+                    recipe.materials.split(" ").map { it.lowercase() }.contains(ingredient.lowercase())
+                }
             }
             _allrecipes.postValue(filteredRecipes)
         }

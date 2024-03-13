@@ -20,11 +20,11 @@ class CorbaViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             val allRecipes = fileHelper.readRecipesFromAssets( "corbatarif.txt")
 
-            // Sadece belirli malzemeleri içeren tarifleri filtrele
             val filteredRecipes = allRecipes.filter { recipe ->
-                ingredients.any { ingredient -> recipe.materials.contains(ingredient, ignoreCase = true) }
+                ingredients.any { ingredient ->
+                    recipe.materials.split(" ").map { it.lowercase() }.contains(ingredient.lowercase())
+                }
             }
-
             _corbaRecipes.postValue(filteredRecipes)
         }
     }

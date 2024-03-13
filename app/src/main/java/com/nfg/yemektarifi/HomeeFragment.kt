@@ -1,11 +1,16 @@
 package com.nfg.yemektarifi
 
+import android.animation.Animator
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.nfg.yemektarifi.databinding.ActivityMainBinding
@@ -20,14 +25,21 @@ class HomeeFragment : Fragment() {
         fragmentBinding = FragmentHomeeBinding.inflate(inflater,container,false)
         return fragmentBinding.root
     }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            activity?.finish()
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val malzemelist = arrayListOf<String>()
-        val adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, malzemelist)
+        val adapter = ArrayAdapter<String>(requireContext(), R.layout.my_text_view, malzemelist)
         fragmentBinding.malzemelist.adapter = adapter
 
         fragmentBinding.add.setOnClickListener {
-            val malzemeinput = fragmentBinding.malzemeinput.text.toString()
+            val malzemeinput = fragmentBinding.malzemeinput.text.toString().replace(" ","")
 
             if (malzemeinput.isNotEmpty()) {
                 malzemelist.add(malzemeinput)
@@ -47,8 +59,8 @@ class HomeeFragment : Fragment() {
                     putStringArrayList("malzemelist", malzemelist)
                 }
                 when {
-                    fragmentBinding.optionCorba.isChecked -> {
-                        navController.navigate(R.id.action_homeeFragment_to_onlyCorba, bundle)
+                    fragmentBinding.optionCorba.isChecked && fragmentBinding.optionTatli.isChecked && fragmentBinding.optionYemek.isChecked  -> {
+                        navController.navigate(R.id.action_homeeFragment_to_allcyt, bundle)
                     }
                     fragmentBinding.optionYemek.isChecked && fragmentBinding.optionCorba.isChecked -> {
                         navController.navigate(R.id.action_homeeFragment_to_corbaYemek, bundle)
@@ -59,8 +71,8 @@ class HomeeFragment : Fragment() {
                     fragmentBinding.optionYemek.isChecked && fragmentBinding.optionTatli.isChecked -> {
                         navController.navigate(R.id.action_homeeFragment_to_yemekTatli, bundle)
                     }
-                    fragmentBinding.optionCorba.isChecked && fragmentBinding.optionTatli.isChecked && fragmentBinding.optionYemek.isChecked  -> {
-                        navController.navigate(R.id.action_homeeFragment_to_allcyt, bundle)
+                    fragmentBinding.optionCorba.isChecked -> {
+                        navController.navigate(R.id.action_homeeFragment_to_onlyCorba, bundle)
                     }
                     fragmentBinding.optionYemek.isChecked -> {
                         navController.navigate(R.id.action_homeeFragment_to_onlyYemek, bundle)
@@ -80,8 +92,5 @@ class HomeeFragment : Fragment() {
 
 
     }
-
-
-
 
   }

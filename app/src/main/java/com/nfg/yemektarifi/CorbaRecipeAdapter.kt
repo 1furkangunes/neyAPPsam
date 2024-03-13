@@ -1,5 +1,6 @@
 package com.nfg.yemektarifi
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,7 @@ class CorbaRecipeAdapter(
             // Tarife ait bilgileri görüntüle
             val recipeNameTextView: TextView = itemView.findViewById(R.id.recipeNameTextView)
             recipeNameTextView.text = recipe.name
+            recipeNameTextView.setTextColor(Color.BLACK)
 
             // Tarife tıklandığında listener'ı çağır
             itemView.setOnClickListener {
